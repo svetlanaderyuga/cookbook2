@@ -1,0 +1,10 @@
+<h2>Ingredients</h2>
+<ul class="ingredients">
+  <button class = 'buttonIngr' (click)="onClick()" >{{buttonName}}</button>
+    <div *ngIf= isButtonClicked>  
+      <li *ngFor="let ingredient of ingredients">
+      <span class="badge">{{ingredient.id}}</span> {{ingredient.name}} 
+      <img id="imageIngrIcons"  src={{ingredient.image}} />
+      </li>
+    </div>
+</ul>
