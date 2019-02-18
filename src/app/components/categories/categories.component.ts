@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Category } from '../../modules/category';
 import { CATEGORIES } from '../../modules/mock-categories';
 
-
-
-
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
