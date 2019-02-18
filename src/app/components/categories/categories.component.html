@@ -1,0 +1,37 @@
+<div>
+  <button class = "btn btn-primary"
+  (click) = 'toggleCategories()'>
+  {{showCategories ? 'Hide': 'Show'}} Categories
+  </button>
+  </div>
+  
+  
+  <div *ngIf= 'showCategories'>
+  
+  <ul class="categories">
+   
+    <li *ngFor="let category of categories"
+      [class.selected]="category === selectedCategory"
+      (click)="onSelect(category)">
+          <span class="badge">{{category.id}}</span> {{category.name}}
+          
+    </li>
+  </ul>
+  
+  
+  
+  <div *ngIf="selectedCategory">
+   
+    <h2>{{selectedCategory.name | uppercase}}:</h2>
+    <div><span>id: </span>{{selectedCategory.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedCategory.name" placeholder="name">
+      </label>
+  
+    <div>
+      <img src = {{selectedCategory.image}}/> 
+    </div>
+    </div>
+   
+  </div>
