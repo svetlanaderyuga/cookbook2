@@ -8,7 +8,7 @@ import { AUTHORS } from '../../modules/mock-authors';
   templateUrl: './authors.component.html',
   styleUrls: ['./authors.component.css']
 })
-export class AuthorsComponent implements OnInit {
+export  class AuthorsComponent implements OnInit {
   authors = AUTHORS;
   selectedAuthor: Author;
   ButtonName: string ;
