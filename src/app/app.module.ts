@@ -8,7 +8,7 @@ import { RecipesComponent } from './components/recipes/recipes.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { IngredientsComponent } from './components/ingredients/ingredients.component';
 import { AuthorsComponent } from './components/authors/authors.component';
-import { MessagesComponent } from './messages/messages.component';
+import { MessagesComponent } from './components/messages/messages.component';
 
 @NgModule({
   declarations: [
