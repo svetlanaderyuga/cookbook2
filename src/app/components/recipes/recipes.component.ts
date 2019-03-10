@@ -25,6 +25,6 @@ export class RecipesComponent implements OnInit {
 
   getRecipes(): void {
     this.recipeService.getRecipes()
-    .subscribe(heroes => this.recipes = heroes);
+    .subscribe(recipes => this.recipes = recipes);
   }
 }

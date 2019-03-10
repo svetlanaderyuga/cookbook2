@@ -15,7 +15,7 @@ export class RecipeService {
 
   getRecipes(): Observable<Recipe[]> {
     // TODO: send the message _after_ fetching the recipes
-    this.messageService.add('HeroService: fetched heroes');
+    this.messageService.add('RecipeService: fetched recipes');
     return of(RECIPES);
   }
 }
