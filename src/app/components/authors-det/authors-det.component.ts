@@ -28,6 +28,9 @@ export class AuthorsDetComponent implements OnInit {
     this.authorService.getAuthor(id)
       .subscribe(author => this.author = author);
   }
+  goBack(): void {
+    this.location.back();
+  }
   // onSelect(authors: Author): void { 
   //   this.selectedAuthor = authors;
   }
