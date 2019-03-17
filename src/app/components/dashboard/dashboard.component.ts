@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Recipe } from '../modules/recipe';
-import { RecipeService } from '../services/recipe.service';
+import { Recipe } from '../../modules/recipe';
+import { RecipeService } from '../../services/recipe.service';
  
 @Component({
   selector: 'app-dashboard',
