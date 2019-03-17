@@ -2,29 +2,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RecipesComponent } from './components/recipes/recipes.component';
-import { CategoriesComponent } from './components/categories/categories.component';
-import { IngredientsComponent } from './components/ingredients/ingredients.component';
 import { AuthorsComponent } from './components/authors/authors.component';
-import { MessagesComponent } from './components/messages/messages.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { IngredientsComponent } from './components/ingredients/ingredients.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.component';
+import { RecipesComponent } from './components/recipes/recipes.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RecipesComponent,
-    CategoriesComponent,
-    IngredientsComponent,
     AuthorsComponent,
+    CategoriesComponent,
+    DashboardComponent,
+    IngredientsComponent,
     MessagesComponent,
-    DashboardComponent
+    RecipeDetailComponent,
+    RecipesComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    FormsModule,
-    AppRoutingModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
