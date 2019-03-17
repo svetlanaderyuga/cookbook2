@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Category } from '../../modules/category';
 import { CategoryService } from '../../services/category.service';
@@ -13,8 +14,6 @@ import { CategoryService } from '../../services/category.service';
 export class CategoriesComponent implements OnInit {
   categories: Category[];
 
-  selectedCategory: Category;
-  showCategories: boolean = false;s
   
    constructor(private categoryService: CategoryService) { 
 
@@ -24,15 +23,6 @@ export class CategoriesComponent implements OnInit {
     this.getCategories();
 
   }
-
-  toggleCategories():void {
-    this.showCategories = !this.showCategories;
-  }
- 
-  onSelect(category: Category): void {
-    this.selectedCategory = category;
-  }
-  
   getCategories(): void {
     this.categoryService.getCategories()
         .subscribe(categories => this.categories = categories);

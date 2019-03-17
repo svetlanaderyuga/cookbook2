@@ -9,6 +9,9 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { IngredientsComponent } from './components/ingredients/ingredients.component';
 import { AuthorsComponent } from './components/authors/authors.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CategoryDetailComponent }  from './components/category-detail/category-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { MessagesComponent } from './components/messages/messages.component';
     CategoriesComponent,
     IngredientsComponent,
     AuthorsComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent,
+    CategoryDetailComponent
   ],
   imports: [
     BrowserModule,

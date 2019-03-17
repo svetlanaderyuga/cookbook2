@@ -14,11 +14,17 @@ export class CategoryService {
   constructor(private messageService: MessageService) { }
 
 
-getCategories(): Observable<Category[]> {
-  // TODO: send the message _after_ fetching the heroes
-  this.messageService.add('CategoryService: fetched categories');
-  return of(CATEGORIES);
-}
+  getCategories(): Observable<Category[]> {
+    // TODO: send the message _after_ fetching the heroes
+    this.messageService.add('CategoryService: fetched categories');
+    return of(CATEGORIES);
+  }
+
+  getCategory(id: number): Observable<Category> {
+    // TODO: send the message _after_ fetching the hero
+    this.messageService.add(`CategoryService: fetched category id=${id}`);
+    return of(CATEGORIES.find(category => category.id === id));
+  }
 }
 
 

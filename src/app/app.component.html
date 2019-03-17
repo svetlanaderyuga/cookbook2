@@ -1,6 +1,14 @@
 <h1>{{ title }}</h1>
-<app-recipes></app-recipes>
-<app-categories></app-categories> 
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/categories">Categories</a>
+
+  </nav>
+
+    
+  
+<app-recipes></app-recipes> 
 <app-ingredients></app-ingredients>   
 <app-authors></app-authors>
+<router-outlet></router-outlet>
 <app-messages></app-messages>
