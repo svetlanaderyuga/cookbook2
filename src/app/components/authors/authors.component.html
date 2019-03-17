@@ -3,8 +3,11 @@
 <div *ngIf="State">
 
   <ul class="authors">
-    <li *ngFor="let author of authors" [class.selected]="author === selectedAuthor" (click)="onSelect(author)">
+    <li *ngFor="let author of authors" >
+    <a routerLink="/detail/{{author.id}}">
+    <!-- [class.selected]="author === selectedAuthor" (click)="onSelect(author)"> -->
       <span class="badge">{{author.id}}</span> {{author.firstName}} {{author.lastName}} <img id="imageAuthorsIcons" src={{author.image}} alt="some image">
+      </a>
     </li>
   </ul>
   

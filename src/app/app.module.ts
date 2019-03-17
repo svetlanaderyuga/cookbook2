@@ -10,6 +10,7 @@ import { IngredientsComponent } from './components/ingredients/ingredients.compo
 import { AuthorsComponent } from './components/authors/authors.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AuthorsDetComponent } from './components/authors-det/authors-det.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     IngredientsComponent,
     AuthorsComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    AuthorsDetComponent
   ],
   imports: [
     BrowserModule,
