@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 import { Recipe } from '../../modules/recipe';
 import { RecipeService } from '../../services/recipe.service';
-
+ 
 @Component({
-  selector: 'app-recipes',
-  templateUrl: './recipes.component.html',
-  styleUrls: ['./recipes.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: [ './dashboard.component.css' ]
 })
-export class RecipesComponent implements OnInit {
-  recipes: Recipe[];
+export class DashboardComponent implements OnInit {
+  recipes: Recipe[] = [];
  
   constructor(private recipeService: RecipeService) { }
  
@@ -19,6 +19,6 @@ export class RecipesComponent implements OnInit {
  
   getRecipes(): void {
     this.recipeService.getRecipes()
-    .subscribe(recipes => this.recipes = recipes);
+      .subscribe(recipes => this.recipes = recipes.slice(1, 5));
   }
 }
