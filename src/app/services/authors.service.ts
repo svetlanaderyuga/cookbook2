@@ -1,9 +1,8 @@
-import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-
 import { Author } from '../modules/author';
 import { AUTHORS } from '../modules/mock-authors';
+import { Injectable } from '@angular/core';
 import { MessageService } from './message.service';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

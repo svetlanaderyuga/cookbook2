@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 import { Author } from '../../modules/author';
 import { AuthorsService } from '../../services/authors.service';
+import { Component, OnInit } from '@angular/core';
  
 @Component({
   selector: 'app-dashboard',

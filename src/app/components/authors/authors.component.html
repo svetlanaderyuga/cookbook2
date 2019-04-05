@@ -1,10 +1,11 @@
 <h2>Authors</h2>
-<button (click)="toggle()" id="ButtonAuthors">{{ButtonName}}</button>
-<div *ngIf="State">
+<!-- Hide/Show Authors button is hidden: -->
+<!-- <button (click)="toggle()" id="ButtonAuthors">{{ButtonName}}</button> -->
+<!-- <div *ngIf="State"> --> 
 
   <ul class="authors">
     <li *ngFor="let author of authors" >
-    <a routerLink="/detail/{{author.id}}">
+    <a routerLink="/authorsdetails/{{author.id}}">
     <!-- [class.selected]="author === selectedAuthor" (click)="onSelect(author)"> -->
       <span class="badge">{{author.id}}</span> {{author.firstName}} {{author.lastName}} <img id="imageAuthorsIcons" src={{author.image}} alt="some image">
       </a>
@@ -23,4 +24,4 @@
   </div>
   
 </div>
-</div>
+<!-- </div> -->

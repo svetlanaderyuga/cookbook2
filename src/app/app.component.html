@@ -1,11 +1,10 @@
 <h1>{{ title }}</h1>
+<nav>
+    <a routerLink="/dashboard">Dashboard </a>
+    <a routerLink="/authors">Authors</a>
+</nav> 
+<router-outlet></router-outlet>  
 <app-recipes></app-recipes>
 <app-categories></app-categories> 
 <app-ingredients></app-ingredients> 
-<router-outlet></router-outlet>  
-<nav>
-    <div><a routerLink="/dashboard">Dashboard</a></div>
-    <div><a routerLink="/authors">Authors</a></div>
-</nav> 
-<!-- <app-authors></app-authors>  -->
 <app-messages></app-messages> 

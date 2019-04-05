@@ -1,7 +1,7 @@
 .selected {
     background-color: #CFD8DC !important;
     /*color: white;*/
-    color:#4B0082;
+    color:#ffffff;
   }
   .authors {
     margin: 0 0 2em 0;
@@ -25,7 +25,7 @@
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
 	border-radius:6px;
-	border:1px solid #4e6096;
+	border:1px solid #ffffff;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
@@ -33,7 +33,7 @@
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #283966;
+	/* text-shadow:0px 1px 0px #ffffff; */
     /*cursor: pointer;
     position: relative;
     left: 0;
@@ -49,14 +49,14 @@
     
   }
   .authors li:hover {
-    color: #607D8B;
+    color: #DDD;
     background-color: #DDD;
     left: .1em;
   }
   .authors .text {
     position: relative;
     top: -3px;
-    color:#4B0082;
+    color:white;
   }
   .authors .badge {
     display: inline-block;
