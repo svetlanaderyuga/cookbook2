@@ -1,3 +1,4 @@
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthorsComponent } from './components/authors/authors.component';
@@ -9,28 +10,30 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { IngredientsComponent } from './components/ingredients/ingredients.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { NgModule } from '@angular/core';
+import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
-
-
-
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RecipesComponent,
+    AuthorsComponent,
     CategoriesComponent,
+    DashboardComponent,
     IngredientsComponent,
     AuthorsComponent,
     MessagesComponent,
     DashboardComponent,
-    AuthorsDetComponent
+    AuthorsDetComponent,
+    RecipeDetailComponent,
+    RecipesComponent
+
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    FormsModule,
-    AppRoutingModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
