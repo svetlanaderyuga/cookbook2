@@ -1,3 +1,14 @@
+
+<h3>Best Authors</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let author of authors" class="col-1-4"
+  routerLink="/authorsdetails/{{author.id}}">
+    <div class="module authors">
+       <h4><span class="badge">{{author.id}}</span> {{author.firstName}} {{author.lastName}} <img id="imageAuthorsIcons" src={{author.image}} alt="some image"></h4>
+    </div>
+  </a>
+</div>
+
 <h3>Best Recipes</h3>
 <div class="grid grid-pad">
   <a *ngFor="let recipe of recipes" class="col-1-4"
@@ -7,3 +18,4 @@
     </div>
   </a>
 </div>
+

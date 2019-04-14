@@ -1,0 +1,12 @@
+<h3>Author's Details</h3>
+<div *ngIf="author">
+
+    <h2>{{author.firstName | uppercase}} {{author.lastName | uppercase}} Details</h2>
+    <div><span>id: </span>{{author.id}}</div>
+    <div>
+      <!-- <label>First Name: -->
+        <!-- <input [(ngModel)]="author.name" placeholder="name"> -->
+        <img id="imageAuthors" src={{author.image}} alt="some image">
+      <!-- </label> -->
+    </div>
+    <button (click)="goBack()">go back</button> 
