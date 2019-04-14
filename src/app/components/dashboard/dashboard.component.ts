@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { CategoryService } from '../../services/category.service';
 import { Category } from 'src/app/modules/category';
+import { CategoryService } from '../../services/category.service';
+import { Component, OnInit } from '@angular/core';
+import { Recipe } from '../../modules/recipe';
+import { RecipeService } from '../../services/recipe.service';
+
 
 
 
@@ -11,17 +14,23 @@ import { Category } from 'src/app/modules/category';
 })
 export class DashboardComponent implements OnInit {
   categories: Category[] = [];
+  recipes: Recipe[] = [];
 
-  constructor(private categoryService: CategoryService) { }
+  constructor(private categoryService: CategoryService, private recipeService : RecipeService) { }
 
   ngOnInit() {
     this.getCategories();
+    this.getRecipes();
   }
 
   getCategories(): void {
     this.categoryService.getCategories()
       .subscribe(categories => this.categories = categories.slice(1, 5));
   }
+
+  getRecipes(): void {
+    this.recipeService.getRecipes()
+      .subscribe(recipes => this.recipes = recipes.slice(1, 5));    
+  }
   
 }
-

@@ -1,9 +1,18 @@
 <h3>Top Categories</h3>
 <div class="grid grid-pad">
-  <a *ngFor="let category of categories" class="col-1-4">
-      routerLink="/detail/{{category.id}}">
+  <a *ngFor="let category of categories" class="col-1-4"
+      routerLink="/categorydetail/{{category.id}}">
     <div class="module category">
       <h4>{{category.name}}</h4>
+    </div>
+  </a>
+</div>
+<h3>Best Recipes</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let recipe of recipes" class="col-1-4"
+  routerLink="/recipedetails/{{recipe.id}}">
+    <div class="module recipe">
+      <h4>{{recipe.name}}</h4>
     </div>
   </a>
 </div>
