@@ -14,8 +14,8 @@ const routes: Routes = [
   { path: 'authors', component: AuthorsComponent},
   { path: 'authorsdetails/:id', component: AuthorsDetComponent },
   { path: 'categories', component: CategoriesComponent },
+  { path: 'categorydetail/:id', component: CategoryDetailComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'detail/:id', component: CategoryDetailComponent },
   { path: 'recipedetails/:id', component: RecipeDetailComponent },
   { path: 'recipes', component: RecipesComponent },
 ];
