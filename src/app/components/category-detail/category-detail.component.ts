@@ -1,9 +1,9 @@
-import { Category } from 'src/app/modules/category';
-import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Category } from 'src/app/modules/category';
+import { CategoryService } from '../../services/category.service';
+import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common';
 
-import { CategoryService } from '../../services/category.service';
 
 @Component({
   selector: 'app-category-detail',

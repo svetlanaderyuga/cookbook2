@@ -1,7 +1,7 @@
-
-import { Component, OnInit } from '@angular/core';
 import { Category } from '../../modules/category';
 import { CategoryService } from '../../services/category.service';
+import { Component, OnInit } from '@angular/core';
+
 
 
 @Component({
