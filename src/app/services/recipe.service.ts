@@ -16,7 +16,7 @@ export class RecipeService {
     this.messageService.add('RecipeService: fetched recipes');
     return of(RECIPES);
   }
-//ZG: hero id?
+
   getRecipe(id: number): Observable<Recipe> {
     // TODO: send the message _after_ fetching the hero
     this.messageService.add(`RecipeService: fetched hero id=${id}`);
