@@ -1,8 +1,8 @@
 /* DashboardComponent's private CSS styles */
 [class*='col-'] {
-    float: left;
-    padding-right: 20px;
-    padding-bottom: 20px;
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
   }
   [class*='col-']:last-of-type {
     padding-right: 0;
@@ -20,7 +20,7 @@
     margin-bottom: 0;
   }
   h4 {
-    position: relative;
+    position: center;
   }
   .grid {
     margin: 0;
@@ -64,12 +64,12 @@
   }
   .authors .badge {
     display: inline-block;
-    font-size: small;
+    font-size: medium;
     color: white;
     padding: 0.8em 0.7em 0 0.7em;
     background-color: #607D8B;
     line-height: 1em;
-    position: relative;
+    position: center;
     left: -1px;
     top: -4px;
     height: 1.8em;
@@ -78,8 +78,28 @@
   }
 
   #imageAuthorsIcons{
-    height: 30px;
-    width: 30px;
-    float:right;
+    height: 60px;
+    width: 60px;
+    float: top;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+  }
 
+  #imageRecipesIcons{
+    height: 60px;
+    width: 60px;
+    float: top;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+  }
+
+  #imageCategoriesIcons{
+    height: 60px;
+    width: 60px;
+    float: top;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
   }
