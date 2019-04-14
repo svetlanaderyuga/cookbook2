@@ -7,7 +7,9 @@
         <input [(ngModel)]="category.name" placeholder="name"/>
       </label>
     </div>
-  
+    <div>
+      <img id="imageCategories" src={{category.image}} alt="category image">
+    </div>
   </div>
 
   <button (click)="goBack()">go back</button>

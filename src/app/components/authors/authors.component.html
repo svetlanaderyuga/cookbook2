@@ -7,13 +7,12 @@
     <li *ngFor="let author of authors" >
     <a routerLink="/authorsdetails/{{author.id}}">
     <!-- [class.selected]="author === selectedAuthor" (click)="onSelect(author)"> -->
-      <span class="badge">{{author.id}}</span> {{author.firstName}} {{author.lastName}} <img id="imageAuthorsIcons" src={{author.image}} alt="some image">
+      <span class="badge">{{author.id}}</span> {{author.firstName}} {{author.lastName}} <!--<img id="imageAuthorsIcons" src={{author.image}} alt="some image">-->
       </a>
     </li>
   </ul>
   
 <div *ngIf="selectedAuthor">
-
   <h2>{{selectedAuthor.firstName | uppercase}} {{selectedAuthor.lastName | uppercase}} Details</h2>
   <div><span>ID: </span>{{selectedAuthor.id}}</div>
   <div>
@@ -22,6 +21,5 @@
       <img id="imageAuthors" src={{selectedAuthor.image}} alt="some image">
     </label>
   </div>
-  
 </div>
-<!-- </div> -->
+

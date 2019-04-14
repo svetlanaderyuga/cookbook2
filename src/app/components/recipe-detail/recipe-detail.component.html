@@ -6,5 +6,8 @@
       <input [(ngModel)]="recipe.name" placeholder="name"/>
     </label>
   </div>
+  <div>
+    <img id="imageRecipes" src={{recipe.image}} alt="some image">
+  </div>
   <button (click)="goBack()">go back</button>
 </div>
