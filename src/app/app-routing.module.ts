@@ -1,25 +1,28 @@
-import { AuthorsComponent } from './components/authors/authors.component';
-import { AuthorsDetComponent }  from './components/authors-det/authors-det.component';
-import { DashboardComponent }   from './components/dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
-import { RecipesComponent} from 'src/app/components/recipes/recipes.component';
-import { RecipeDetailComponent }  from './components/recipe-detail/recipe-detail.component';
-import { RouterModule, Routes} from '@angular/router';  
+import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes =[
-  { path: 'authors', component: AuthorsComponent},
-  { path: 'dashboard', component: DashboardComponent },
+import { AuthorsComponent } from './components/authors/authors.component';
+import { AuthorsDetComponent } from './components/authors-det/authors-det.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { CategoryDetailComponent } from './components/category-detail/category-detail.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RecipesComponent} from 'src/app/components/recipes/recipes.component';
+import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.component';
+
+const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'authors', component: AuthorsComponent},
   { path: 'authorsdetails/:id', component: AuthorsDetComponent },
+  { path: 'categories', component: CategoriesComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'detail/:id', component: CategoryDetailComponent },
   { path: 'recipedetails/:id', component: RecipeDetailComponent },
   { path: 'recipes', component: RecipesComponent },
-]
+];
+
+
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { 
-    
-}
-
-
+export class AppRoutingModule { }

@@ -1,7 +1,10 @@
+import { Category } from 'src/app/modules/category';
+import { CategoryService } from '../../services/category.service';
 
 import { Author } from '../../modules/author';
 import { AuthorsService } from '../../services/authors.service';
 import { Component, OnInit } from '@angular/core';
+
 import { Recipe } from '../../modules/recipe';
 import { RecipeService } from '../../services/recipe.service';
 
@@ -13,36 +16,29 @@ import { RecipeService } from '../../services/recipe.service';
 export class DashboardComponent implements OnInit {
 
   authors: Author[] = [];
+  categories: Category[] = [];
   recipes: Recipe[] = [];
- 
-  constructor(private authorService: AuthorsService,private recipeService: RecipeService) { }
- 
+
+  constructor(private authorService: AuthorsService, private categoryService: CategoryService, private recipeService: RecipeService) { }
+
   ngOnInit() {
     this.getAuthors();
+    this.getCategories();
     this.getRecipes();
   }
- 
+
   getAuthors(): void {
     this.authorService.getAuthors()
       .subscribe(authors => this.authors = authors.slice(0, 4));
   }
+
+  getCategories(): void {
+    this.categoryService.getCategories()
+      .subscribe(categories => this.categories = categories.slice(1, 5));
+  }
+
   getRecipes(): void {
     this.recipeService.getRecipes()
       .subscribe(recipes => this.recipes = recipes.slice(1, 5));
   }
 }
-
-//   recipes: Recipe[] = [];
- 
-//   constructor(private recipeService: RecipeService) { }
- 
-//   ngOnInit() {
-//     this.getRecipes();
-//   }
- 
-//   getRecipes(): void {
-//     this.recipeService.getRecipes()
-//       .subscribe(recipes => this.recipes = recipes.slice(1, 5));
-//   }
-// }
-
