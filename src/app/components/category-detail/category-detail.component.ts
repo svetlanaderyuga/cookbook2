@@ -20,13 +20,13 @@ export class CategoryDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private categoryService: CategoryService,
     private location: Location
-  ){}
-   
+  ) {}
+
 
   ngOnInit(): void {
     this.getCategory();
   }
-  
+
   getCategory(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.categoryService.getCategory(id)
@@ -36,5 +36,10 @@ export class CategoryDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-  
+
+  save(): void {
+    this.categoryService.updateCategory(this.category)
+      .subscribe(() => this.goBack());
+  }
+
 }

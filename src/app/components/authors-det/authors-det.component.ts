@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./authors-det.component.css']
 })
 export class AuthorsDetComponent implements OnInit {
-  //authors: Author[];
+  // authors: Author[];
   author: Author;
   selectedAuthor: Author;
 
@@ -31,7 +31,7 @@ export class AuthorsDetComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-  // onSelect(authors: Author): void { 
+  // onSelect(authors: Author): void {
   //   this.selectedAuthor = authors;
   }
 

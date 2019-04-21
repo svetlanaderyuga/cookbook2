@@ -14,11 +14,9 @@ import { Component, OnInit } from '@angular/core';
 export class CategoriesComponent implements OnInit {
   categories: Category[];
 
-  
-   constructor(private categoryService: CategoryService) { 
-
+   constructor(private categoryService: CategoryService) {
    }
- 
+
   ngOnInit() {
     this.getCategories();
 
@@ -26,6 +24,19 @@ export class CategoriesComponent implements OnInit {
   getCategories(): void {
     this.categoryService.getCategories()
         .subscribe(categories => this.categories = categories);
+  }
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.categoryService.addCategory({ name } as Category)
+      .subscribe(hero => {
+        this.categories.push(hero);
+      });
+  }
+
+  delete(category: Category): void {
+    this.categories = this.categories.filter(h => h !== category);
+    this.categoryService.deleteCategory(category).subscribe();
   }
 }
 

@@ -1,6 +1,8 @@
+import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Recipe } from './modules/recipe';
-import { Injectable } from '@angular/core';
+import { Category } from './modules/category';
+
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +18,14 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 16, name: 'Mac and Cheese', image: 'assets/images/recipes/macandcheese.jpeg' },
       { id: 17, name: 'Bliny', image: 'assets/images/recipes/bliny.jpeg' },
     ];
-    return {recipes};
+    const categories = [
+      { id: 1, name: 'Salads ', image: 'assets/images/categories/salads.jpeg' },
+      { id: 2, name: 'Soups ', image: 'assets/images/categories/soups.jpeg' },
+      { id: 3, name: 'Main course ', image: 'assets/images/categories/mainCourse.jpeg' },
+      { id: 4, name: 'Deserts ', image: 'assets/images/categories/desserts.jpeg' },
+      { id: 5, name: 'Breakfasts ', image: 'assets/images/categories/breakfasts.jpeg' },
+    ];
+    return {recipes, categories};
   }
 
   // Overrides the genId method to ensure that a recipe always has an id.
@@ -24,7 +33,7 @@ export class InMemoryDataService implements InMemoryDbService {
   // the method below returns the initial number (11).
   // if the recipes array is not empty, the method below returns the highest
   // recipe id + 1.
-  genId(recipes: Recipe[]): number {
-    return recipes.length > 0 ? Math.max(...recipes.map(recipe => recipe.id)) + 1 : 11;
+  genId<T extends Recipe | Category>(myTable: T[]): number {
+    return myTable.length > 0 ? Math.max(...myTable.map(t => t.id)) + 1 : 11;
   }
 }
