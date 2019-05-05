@@ -30,5 +30,17 @@ describe('Recipe Details', () => {
       'Wrong recipe id is displayed'
     );
   });
-
+  it('should display image on the recipe details page', async () => {
+    expect(await recipeDetails.isRecipeImageDisplayed()).toBe(
+      true,
+      'Image is not displayed'
+    );
+  });
+  it('should redirect to the dashboard page when Go Back button is displayed', async () => {
+    await recipeDetails.clickGoBack();
+    expect(await browser.getCurrentUrl()).toContain(
+      'dashboard',
+      'Was not taken to Dashboard page.'
+    );
+  });
 });
