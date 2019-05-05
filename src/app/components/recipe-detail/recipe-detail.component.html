@@ -1,6 +1,6 @@
 <div *ngIf="recipe">
-  <h2>{{recipe.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{recipe.id}}</div>
+  <h2 id = "recipeTitle">{{recipe.name | uppercase}} Details</h2>
+  <div id = "recipeId"><span>id: </span>{{recipe.id}}</div>
   <div>
     <label>name:
       <input [(ngModel)]="recipe.name" placeholder="name"/>
@@ -9,5 +9,5 @@
   <div>
     <img id="imageRecipes" src={{recipe.image}} alt="some image">
   </div>
-  <button (click)="goBack()">go back</button>
+  <button id = "goBackButton" (click)="goBack()">go back</button>
 </div>
