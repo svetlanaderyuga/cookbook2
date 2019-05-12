@@ -4,6 +4,8 @@ export class Dashboard {
 
   topRecipesTitle = $('#topRecipeTitle');
   firstRecipeDiv = element.all(by.css('div[id*=moduleRecipe]')).get(0);
+  firstCategoryDiv = element.all(by.css('div[id*=moduleCategory]')).get(0);
+
 
   async navigateToDashboard(): Promise<void> {
     await browser.get('/dashboard');
@@ -13,5 +15,8 @@ export class Dashboard {
   }
   async clickFirstRecipe(): Promise<void> {
     return await this.firstRecipeDiv.click();
+  }
+  async clickFirstCategory(): Promise<void> {
+    return await this.firstCategoryDiv.click();
   }
 }
