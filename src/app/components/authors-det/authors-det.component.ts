@@ -31,8 +31,7 @@ export class AuthorsDetComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-  // onSelect(authors: Author): void { 
-  //   this.selectedAuthor = authors;
+  onSelect(authors: Author): void { 
+  this.selectedAuthor = authors;
   }
-
-
+}
